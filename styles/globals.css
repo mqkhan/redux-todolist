@@ -1,33 +1,47 @@
-@tailwind base;
+/* @tailwind base; */
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  height: 500px;
+  background-color: rgb(220, 220, 220);
+  margin: 0 auto;
+  border-radius: 10px;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.list {
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: dimgrey 2px 2px 4px 4px;
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+li {
+  padding: 5px;
 }
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+input {
+  padding: 5px 12px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #24292e;
+  background-color: #ffffff;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  outline: none;
+  box-shadow: dimgrey 1px 1px 1px 1px inset;
+}
+button {
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  color: rgb(236, 232, 232);
+  background-color: dimgray;
+  box-shadow: dimgrey 1px 1px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 4px 8px;
+  display: inline-block;
+  min-height: 28px;
+  transition: background-color 0.24s, box-shadow 0.24s;
 }
